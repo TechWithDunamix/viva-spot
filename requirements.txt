@@ -1,0 +1,8 @@
+pydantic
+uvicorn
+tortoise-orm[asyncpg]
+python-dotenv
+aerich
+jinja
+tomlkit
+git+https://github.com/nexios-labs/nexios.git@main
