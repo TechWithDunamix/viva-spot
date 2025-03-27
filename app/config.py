@@ -9,8 +9,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 dotenv_path = BASE_DIR / ".env"
-
-load_dotenv()
+load_dotenv(dotenv_path)
 app_config = MakeConfig({
   
     "cors" : {
