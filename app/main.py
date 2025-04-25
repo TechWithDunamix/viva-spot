@@ -38,7 +38,10 @@ app.add_route(
         "/static/{path:path}",  
         handler=StaticFilesHandler(
             directory=STATIC_FOLDER  
-        )
+        ),
+        methods=["GET"],
+        description="Serve static files",
+        summary="Static files",
     )
 )
 
@@ -57,3 +60,6 @@ if __name__ == "__main__":
         host: The host address to bind the server to (default: "0.0.0.0").
     """
     uvicorn.run(app, port=8000, host="0.0.0.0")  # Run the app on all available interfaces
+
+
+app._setup_openapi()
