@@ -32,11 +32,11 @@ db_config =  {
         'default': {
             'engine': 'tortoise.backends.asyncpg',
             'credentials': {
-                'host': os.getenv("db_host"),
-                'port': os.getenv("db_port"),
-                'user': os.getenv("db_user"),
-                'password': os.getenv("db_password"),
-                'database': os.getenv("db_name"),
+                'host': os.getenv("DB_HOST"),
+                'port': os.getenv("DB_PORT"),
+                'user': os.getenv("DB_USER"),
+                'password': os.getenv("DB_PASSWORD"),
+                'database':os.getenv("DB_NAME"),
             }
         }
     },
@@ -47,3 +47,6 @@ db_config =  {
         }
     }
 }
+
+
+print(db_config)
